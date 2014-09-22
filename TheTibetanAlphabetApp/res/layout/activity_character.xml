@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.thetibetanalphabetapp.CharacterActivity" >
+
+    <com.example.thetibetanalphabetapp.RatioFrameLayout
+        android:id="@+id/ratioFrameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bar"
+        android:contentDescription="ratio:3.2" >
+
+        <ImageView
+            android:id="@+id/imgWrite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/zha_write" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <View
+                android:id="@+id/viewPrev"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+            <View
+                android:id="@+id/viewNext"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </com.example.thetibetanalphabetapp.RatioFrameLayout>
+
+    <com.example.thetibetanalphabetapp.RatioFrameLayout
+        android:id="@+id/ratioFrameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bar"
+        android:contentDescription="ratio:3.4594" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+            <View
+                android:id="@+id/viewHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+            
+            <View
+                android:id="@+id/viewEraser"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+            
+            <View
+                android:id="@+id/viewPlay"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </com.example.thetibetanalphabetapp.RatioFrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layoutCanvas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ratioFrameLayout2"
+        android:layout_below="@+id/ratioFrameLayout1"
+        android:background="@drawable/cha" >
+
+        <com.example.thetibetanalphabetapp.DrawCancasView
+            android:id="@+id/drawCancasView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+</RelativeLayout>

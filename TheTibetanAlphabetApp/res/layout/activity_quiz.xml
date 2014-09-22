@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.thetibetanalphabetapp.QuizActivity" >
+
+    <LinearLayout
+        android:id="@+id/layoutAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnAnswer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/answer"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="16dp"
+            android:text="A. Button"
+            android:textColor="#322A20"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnAnswer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/answer"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="16dp"
+            android:text="A. Button"
+            android:textColor="#322A20"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnAnswer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/answer"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="16dp"
+            android:text="A. Button"
+            android:textColor="#322A20"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnAnswer4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/answer"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="16dp"
+            android:text="A. Button"
+            android:textColor="#322A20"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/answer" >
+
+        <TextView
+            android:id="@+id/txtQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:text="Question: 1/30"
+            android:textColor="#322A20"
+            android:textStyle="bold" />
+        
+        <TextView
+            android:id="@+id/txtCorrect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="16dp"
+            android:text="Correct: 0"
+            android:textColor="#322A20"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imgQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutAnswer"
+        android:layout_below="@+id/frameLayout1"
+        android:layout_margin="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/chha_quiz" />
+
+    <ImageView
+        android:id="@+id/imgIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wrong"
+        android:visibility="invisible" />
+
+</RelativeLayout>
